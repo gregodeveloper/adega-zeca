@@ -14,11 +14,16 @@ import {
   SlidersHorizontal,
   ChevronRight,
   ExternalLink,
+  Sparkles,
+  Wine,
+  Beer,
+  Layers,
+  CheckCircle2,
+  Info,
 } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logoImg from "@/assets/logo.png";
-import fundoImg from "@/assets/fundo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,11 +73,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 199,90",
     cat: "Combos",
     volume: "1L + 4 Latas",
-    image:
-      "https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80",
     badge: "Mais Pedido",
     alcohol: "40% Vol.",
     serving: "Servir com gelo de coco e Red Bull no copão de 700ml",
+    image:
+      "https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -82,11 +87,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 149,90",
     cat: "Combos",
     volume: "1L + 4 Latas",
-    image:
-      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80",
     badge: "Destaque",
     alcohol: "40% Vol.",
     serving: "Ideal para resenha com amigos",
+    image:
+      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -96,11 +101,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 25,00",
     cat: "Combos",
     volume: "700ml",
-    image:
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
     badge: "Exclusivo",
     alcohol: "Mix Alcoólico",
     serving: "Servido montado e trincando de gelado",
+    image:
+      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -110,11 +115,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 169,90",
     cat: "Combos",
     volume: "750ml + Tônicas",
-    image:
-      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
     badge: "Premium",
     alcohol: "47.3% Vol.",
     serving: "Sirva em taça de gin com gelo e fatia de limão taiti",
+    image:
+      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "combo-absolut",
@@ -123,11 +128,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 159,90",
     cat: "Combos",
     volume: "1L + 4 Latas",
-    image:
-      "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=800&q=80",
     badge: "Tropical",
     alcohol: "40% Vol.",
     serving: "Combinação frutada e refrescante",
+    image:
+      "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "copao-gin-tropical",
@@ -136,11 +141,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 22,00",
     cat: "Combos",
     volume: "700ml",
-    image:
-      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
     badge: "Refrescante",
     alcohol: "Mix Alcoólico",
     serving: "Preparado no balcão com guarnição",
+    image:
+      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
   },
 
   // CERVEJAS
@@ -151,11 +156,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 11,99",
     cat: "Cervejas",
     volume: "330ml",
-    image:
-      "https://images.unsplash.com/photo-1618886614638-80e3c153d31a?auto=format&fit=crop&w=800&q=80",
     badge: "-4°C",
     alcohol: "5.0% Vol.",
     serving: "Temperatura ideal: -4°C a -2°C",
+    image:
+      "https://images.unsplash.com/photo-1618886614638-80e3c153d31a?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -165,11 +170,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 12,50",
     cat: "Cervejas",
     volume: "330ml",
-    image:
-      "https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=800&q=80",
     badge: "Com Limão",
     alcohol: "4.5% Vol.",
     serving: "Consumir com a fatia de limão no gargalo",
+    image:
+      "https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "budweiser-longneck",
@@ -178,11 +183,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 9,99",
     cat: "Cervejas",
     volume: "330ml",
-    image:
-      "https://images.unsplash.com/photo-1608270114002-c9a9bf86498a?auto=format&fit=crop&w=800&q=80",
     badge: "Gelada",
     alcohol: "5.0% Vol.",
     serving: "Ideal para qualquer ocasião",
+    image:
+      "https://images.unsplash.com/photo-1608270114002-c9a9bf86498a?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "spaten-longneck",
@@ -191,11 +196,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 10,50",
     cat: "Cervejas",
     volume: "355ml",
-    image:
-      "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?auto=format&fit=crop&w=800&q=80",
     badge: "Puro Malte",
     alcohol: "5.2% Vol.",
     serving: "Receita de Munique",
+    image:
+      "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "amstel-lata",
@@ -204,11 +209,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 6,50",
     cat: "Cervejas",
     volume: "Lata 350ml",
-    image:
-      "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?auto=format&fit=crop&w=800&q=80",
     badge: "Lata Trincando",
     alcohol: "4.6% Vol.",
     serving: "Conservada em gelo moído",
+    image:
+      "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "heineken-zero",
@@ -217,11 +222,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 11,99",
     cat: "Cervejas",
     volume: "330ml",
-    image:
-      "https://images.unsplash.com/photo-1618886614638-80e3c153d31a?auto=format&fit=crop&w=800&q=80",
     badge: "Sem Álcool",
     alcohol: "0.0% Vol.",
     serving: "Para quem não consome álcool ou é motorista da rodada",
+    image:
+      "https://images.unsplash.com/photo-1618886614638-80e3c153d31a?auto=format&fit=crop&w=800&q=80",
   },
 
   // DESTILADOS
@@ -232,11 +237,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 149,90",
     cat: "Destilados",
     volume: "Garrafa 1L",
-    image:
-      "https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80",
     badge: "Original",
     alcohol: "40% Vol.",
     serving: "Puro com gelo ou com energético de maçã verde",
+    image:
+      "https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -246,11 +251,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 179,90",
     cat: "Destilados",
     volume: "Garrafa 1L",
-    image:
-      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80",
     badge: "12 Anos",
     alcohol: "40% Vol.",
     serving: "Aprecie puro ou com pedras de gelo mineral",
+    image:
+      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "red-label-garrafa",
@@ -259,11 +264,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 109,90",
     cat: "Destilados",
     volume: "Garrafa 1L",
-    image:
-      "https://images.unsplash.com/photo-1582819509237-d5b75f20ff7a?auto=format&fit=crop&w=800&q=80",
     badge: "Popular",
     alcohol: "40% Vol.",
     serving: "Excelente base para drinks e gelos aromatizados",
+    image:
+      "https://images.unsplash.com/photo-1582819509237-d5b75f20ff7a?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "ballantines-finest",
@@ -272,11 +277,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 94,90",
     cat: "Destilados",
     volume: "Garrafa 1L",
-    image:
-      "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&w=800&q=80",
     badge: "Custo-Benefício",
     alcohol: "40% Vol.",
     serving: "Combina perfeitamente com gelo de coco",
+    image:
+      "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "chivas-12",
@@ -285,11 +290,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 169,90",
     cat: "Destilados",
     volume: "Garrafa 1L",
-    image:
-      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80",
     badge: "12 Anos",
     alcohol: "40% Vol.",
     serving: "Em copo baixo com esfera de gelo",
+    image:
+      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "tanqueray-london-dry",
@@ -298,14 +303,14 @@ const PRODUCTS: Product[] = [
     price: "R$ 129,90",
     cat: "Destilados",
     volume: "Garrafa 750ml",
-    image:
-      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
     badge: "Botânicos",
     alcohol: "47.3% Vol.",
     serving: "Com tônica, gelo e twist de limão",
+    image:
+      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
   },
 
-  // ENERGÉTICOS & REFRIGERANTES
+  // NÃO ALCOÓLICOS
   {
     id: "redbull-tradicional",
     name: "Red Bull Energy Drink 250ml",
@@ -313,11 +318,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 11,50",
     cat: "Não Alcoólicos",
     volume: "Lata 250ml",
-    image:
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
     badge: "Original",
     alcohol: "Sem Álcool",
     serving: "Consumo direto ou misturado a destilados",
+    image:
+      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "redbull-tropical",
@@ -326,11 +331,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 11,50",
     cat: "Não Alcoólicos",
     volume: "Lata 250ml",
-    image:
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
     badge: "Tropical",
     alcohol: "Sem Álcool",
     serving: "Excelente combinação com Gin",
+    image:
+      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "monster-energy-473",
@@ -339,11 +344,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 11,90",
     cat: "Não Alcoólicos",
     volume: "Lata 473ml",
-    image:
-      "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=800&q=80",
     badge: "473ml",
     alcohol: "Sem Álcool",
     serving: "Consumir bem gelado",
+    image:
+      "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "coca-cola-lata",
@@ -352,11 +357,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 5,50",
     cat: "Não Alcoólicos",
     volume: "Lata 350ml",
-    image:
-      "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
     badge: "Trincando",
     alcohol: "Sem Álcool",
     serving: "Gelada em lata",
+    image:
+      "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "agua-mineral-com-gas",
@@ -365,14 +370,14 @@ const PRODUCTS: Product[] = [
     price: "R$ 4,00",
     cat: "Não Alcoólicos",
     volume: "500ml",
-    image:
-      "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=800&q=80",
     badge: "Hidratação",
     alcohol: "Sem Álcool",
     serving: "Fundamental entre as rodadas",
+    image:
+      "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=800&q=80",
   },
 
-  // GELOS DE SABOR & COPOS
+  // GELOS & ACESSÓRIOS
   {
     id: "gelo-coco-200",
     name: "Gelo de Coco Natural 200ml",
@@ -380,11 +385,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 4,50",
     cat: "Gelos & Acessórios",
     volume: "Bloco 200ml",
-    image:
-      "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
     badge: "100% Coco",
     alcohol: "Sem Álcool",
     serving: "Indispensável para Whisky e Gin",
+    image:
+      "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -394,11 +399,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 5,00",
     cat: "Gelos & Acessórios",
     volume: "Bloco 200ml",
-    image:
-      "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
     badge: "Frutado",
     alcohol: "Sem Álcool",
     serving: "Harmoniza com Gin e Tônica",
+    image:
+      "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "gelo-melancia",
@@ -407,11 +412,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 5,00",
     cat: "Gelos & Acessórios",
     volume: "Bloco 200ml",
-    image:
-      "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
     badge: "Refrescante",
     alcohol: "Sem Álcool",
-    serving: "Combinação explosiva com energéticos tropicais",
+    serving: "Combinação com energéticos tropicais",
+    image:
+      "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "saco-gelo-5kg",
@@ -420,11 +425,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 18,00",
     cat: "Gelos & Acessórios",
     volume: "Pacote 5kg",
-    image:
-      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80",
     badge: "5kg Filtrado",
     alcohol: "Sem Álcool",
     serving: "Para encher coolers, baldes e caixas térmicas",
+    image:
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "copao-acrilico-700",
@@ -433,14 +438,14 @@ const PRODUCTS: Product[] = [
     price: "R$ 8,00",
     cat: "Gelos & Acessórios",
     volume: "700ml",
-    image:
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
     badge: "Oficial",
     alcohol: "Acessório",
     serving: "Ideal para montagem de copões",
+    image:
+      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
   },
 
-  // TABACARIA & CONVENIÊNCIA
+  // TABACARIA
   {
     id: "pod-ignite-v50",
     name: "Pod Ignite V50 (5000 Puffs)",
@@ -448,11 +453,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 89,90",
     cat: "Tabacaria",
     volume: "5000 Puffs",
-    image:
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
     badge: "Ignite",
     alcohol: "Tabacaria",
     serving: "Consulte sabores em estoque",
+    image:
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
     promo: true,
   },
   {
@@ -462,11 +467,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 9,00",
     cat: "Tabacaria",
     volume: "Livreto 33 folhas",
-    image:
-      "https://images.unsplash.com/photo-1528731708534-816fe59f90cb?auto=format&fit=crop&w=800&q=80",
     badge: "King Size",
     alcohol: "Tabacaria",
     serving: "Pronta entrega",
+    image:
+      "https://images.unsplash.com/photo-1528731708534-816fe59f90cb?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "carvao-narguile",
@@ -475,11 +480,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 38,00",
     cat: "Tabacaria",
     volume: "Caixa 1kg",
-    image:
-      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80",
     badge: "Sem Cheiro",
     alcohol: "Tabacaria",
     serving: "Sessões duradouras",
+    image:
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80",
   },
 
   // VINHOS & ESPUMANTES
@@ -490,11 +495,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 119,90",
     cat: "Vinhos & Espumantes",
     volume: "750ml",
-    image:
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
     badge: "Brut",
     alcohol: "11.8% Vol.",
     serving: "Servir entre 6°C e 8°C em taça flûte",
+    image:
+      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "casillero-cabernet",
@@ -503,11 +508,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 64,90",
     cat: "Vinhos & Espumantes",
     volume: "750ml",
-    image:
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80",
     badge: "Chile",
     alcohol: "13.5% Vol.",
     serving: "Harmoniza com queijos, carnes e noites amenas",
+    image:
+      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "pergola-tinto-suave",
@@ -516,11 +521,11 @@ const PRODUCTS: Product[] = [
     price: "R$ 32,00",
     cat: "Vinhos & Espumantes",
     volume: "Garrafa 1L",
-    image:
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80",
     badge: "Suave",
     alcohol: "10.2% Vol.",
     serving: "Pode ser consumido levemente refrigerado",
+    image:
+      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -535,46 +540,61 @@ const CATEGORIES = [
   "Vinhos & Espumantes",
 ];
 
+// Helper to return SVG icons instead of emojis
+function renderBadgeIcon(badge: string) {
+  const b = badge.toLowerCase();
+  if (b.includes("pedido") || b.includes("exclusivo")) {
+    return <Flame className="h-3 w-3 text-amber-400 shrink-0" />;
+  }
+  if (b.includes("-4") || b.includes("gelada") || b.includes("trincando")) {
+    return <Snowflake className="h-3 w-3 text-cyan-400 shrink-0" />;
+  }
+  if (b.includes("premium") || b.includes("destaque") || b.includes("original")) {
+    return <Sparkles className="h-3 w-3 text-amber-400 shrink-0" />;
+  }
+  if (b.includes("anos") || b.includes("brut")) {
+    return <Wine className="h-3 w-3 text-purple-400 shrink-0" />;
+  }
+  if (b.includes("malte")) {
+    return <Beer className="h-3 w-3 text-amber-400 shrink-0" />;
+  }
+  return <ShieldCheck className="h-3 w-3 text-emerald-400 shrink-0" />;
+}
+
 function AgeVerification({ onPass }: { onPass: () => void }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-2xl transition-opacity animate-in fade-in duration-300">
-      <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/90 p-6 sm:p-8 text-center shadow-2xl backdrop-blur-xl">
-        {/* Subtle ambient light */}
-        <div className="pointer-events-none absolute -top-24 -left-24 h-48 w-48 rounded-full bg-amber-600/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -right-24 h-48 w-48 rounded-full bg-orange-600/10 blur-3xl" />
-
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-xl transition-opacity animate-in fade-in duration-300">
+      <div className="relative w-full max-w-sm overflow-hidden rounded-xl border border-white/[0.06] bg-zinc-950 p-6 sm:p-7 text-center shadow-2xl">
         <div className="relative z-10 flex flex-col items-center">
-          <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-zinc-900/60 p-3 shadow-inner">
-            <img
-              src={logoImg}
-              alt="Adega do Chefe"
-              className="h-full w-full object-contain"
-            />
+          <img
+            src={logoImg}
+            alt="Adega do Chefe"
+            className="h-14 w-auto object-contain drop-shadow"
+          />
+
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-2.5 py-0.5 text-[10px] font-semibold text-amber-300">
+            <ShieldCheck className="h-3 w-3 text-amber-400" />
+            <span>Acesso Restrito 18+</span>
           </div>
 
-          <div className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-[11px] font-semibold text-amber-300">
-            <ShieldCheck className="h-3.5 w-3.5 text-amber-400" />
-            Acesso Restrito
-          </div>
-
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+          <h2 className="mt-3 text-xl font-bold tracking-tight text-white">
             Você tem 18 anos ou mais?
           </h2>
 
-          <p className="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-xs">
-            Este cardápio contém bebidas alcoólicas. A venda e o consumo de bebidas alcoólicas são proibidos para menores de 18 anos conforme a Lei nº 8.069.
+          <p className="mt-2 text-xs text-zinc-400 leading-relaxed max-w-xs">
+            Este cardápio contém bebidas alcoólicas. A venda e o consumo são proibidos para menores de 18 anos (Lei Federal nº 8.069).
           </p>
 
-          <div className="mt-6 grid w-full grid-cols-2 gap-3">
+          <div className="mt-5 grid w-full grid-cols-2 gap-2.5">
             <a
               href="https://www.google.com"
-              className="flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/60 px-4 py-3 text-xs font-semibold text-zinc-400 transition hover:bg-zinc-800 hover:text-white"
+              className="flex items-center justify-center rounded-lg border border-white/[0.06] bg-zinc-900/60 px-3 py-2.5 text-xs font-medium text-zinc-400 transition hover:bg-zinc-800 hover:text-white"
             >
               Sou menor
             </a>
             <button
               onClick={onPass}
-              className="flex items-center justify-center rounded-xl gradient-btn px-4 py-3 text-xs font-bold text-zinc-950 shadow-md transition hover:scale-[1.02]"
+              className="flex items-center justify-center rounded-lg gradient-btn px-3 py-2.5 text-xs font-semibold shadow-sm transition"
             >
               Sim, tenho 18+
             </button>
@@ -611,98 +631,98 @@ function ProductModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl border border-white/10 bg-zinc-950 p-6 text-left shadow-2xl backdrop-blur-xl animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-200"
+        className="relative w-full max-w-lg max-h-[88vh] overflow-y-auto rounded-t-2xl sm:rounded-xl border border-white/[0.06] bg-zinc-950 p-5 sm:p-6 text-left shadow-2xl backdrop-blur-xl animate-in slide-in-from-bottom-5 sm:zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Handle bar on mobile */}
-        <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-zinc-800 sm:hidden" />
+        {/* Mobile handle */}
+        <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-zinc-800 sm:hidden" />
 
         {/* Close button */}
         <button
           onClick={onClose}
           aria-label="Fechar detalhes"
-          className="absolute top-4 right-4 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-zinc-900/80 text-zinc-400 transition hover:bg-zinc-800 hover:text-white"
+          className="absolute top-4 right-4 z-20 flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.06] bg-zinc-900/80 text-zinc-400 transition hover:bg-zinc-800 hover:text-white"
         >
           <X className="h-4 w-4" />
         </button>
 
-        {/* Product Image Cover */}
-        <div className="relative -mx-6 -mt-6 sm:-mt-6 h-60 overflow-hidden bg-zinc-900">
+        {/* Image */}
+        <div className="relative -mx-5 -mt-5 sm:-mx-6 sm:-mt-6 h-56 overflow-hidden bg-zinc-900">
           <img
             src={product.image}
             alt={product.name}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent" />
 
           {product.badge && (
-            <span className="absolute top-4 left-4 rounded-full border border-white/15 bg-black/70 px-2.5 py-1 text-[11px] font-semibold text-amber-300 backdrop-blur-md">
-              {product.badge}
+            <span className="absolute top-3 left-3 flex items-center gap-1 rounded-md border border-white/[0.08] bg-black/75 px-2 py-0.5 text-[10px] font-medium text-amber-300 backdrop-blur-md">
+              {renderBadgeIcon(product.badge)}
+              <span>{product.badge}</span>
             </span>
           )}
 
-          <div className="absolute bottom-3 left-6 right-6">
-            <span className="text-[11px] font-semibold tracking-wider text-amber-400 uppercase">
+          <div className="absolute bottom-3 left-5 right-5">
+            <span className="text-[10px] font-semibold tracking-wider text-amber-400 uppercase">
               {product.cat}
             </span>
-            <h3 className="mt-0.5 text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
+            <h3 className="mt-0.5 text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
               {product.name}
             </h3>
           </div>
         </div>
 
-        {/* Modal Info */}
-        <div className="mt-5 space-y-4">
-          <p className="text-sm text-zinc-300 leading-relaxed">{product.desc}</p>
+        {/* Info */}
+        <div className="mt-4 space-y-3.5">
+          <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">{product.desc}</p>
 
-          {/* Quick Specifications */}
           <div className="grid grid-cols-2 gap-2 text-xs">
-            <div className="rounded-xl border border-white/5 bg-zinc-900/50 p-3">
+            <div className="rounded-lg border border-white/[0.04] bg-zinc-900/40 p-2.5">
               <span className="text-[10px] text-zinc-500 uppercase tracking-wider block">
                 Volume
               </span>
-              <span className="font-semibold text-zinc-200">{product.volume}</span>
+              <span className="font-medium text-zinc-200">{product.volume}</span>
             </div>
-            <div className="rounded-xl border border-white/5 bg-zinc-900/50 p-3">
+            <div className="rounded-lg border border-white/[0.04] bg-zinc-900/40 p-2.5">
               <span className="text-[10px] text-zinc-500 uppercase tracking-wider block">
                 Graduação / Tipo
               </span>
-              <span className="font-semibold text-amber-400">
+              <span className="font-medium text-amber-400">
                 {product.alcohol || "Original"}
               </span>
             </div>
           </div>
 
           {product.serving && (
-            <div className="rounded-xl border border-amber-500/15 bg-amber-500/5 p-3.5 text-xs text-zinc-300">
-              <span className="font-semibold text-amber-400 block mb-1">
-                Recomendação da Casa:
-              </span>
-              {product.serving}
+            <div className="rounded-lg border border-amber-500/10 bg-amber-500/[0.04] p-3 text-xs text-zinc-300">
+              <div className="flex items-center gap-1.5 font-medium text-amber-400 mb-0.5">
+                <Info className="h-3 w-3" />
+                <span>Recomendação da Casa</span>
+              </div>
+              <p className="text-zinc-400 text-[11px] leading-relaxed">{product.serving}</p>
             </div>
           )}
 
-          {/* Pricing & Availability */}
-          <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+          {/* Price & availability */}
+          <div className="pt-3 border-t border-white/[0.05] flex items-center justify-between">
             <div>
               <span className="text-[10px] text-zinc-500 uppercase tracking-wider block">
-                Valor para Consulta
+                Valor Balcão
               </span>
-              <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gradient-amber">
+              <span className="text-xl sm:text-2xl font-bold tracking-tight text-gradient-amber">
                 {product.price}
               </span>
             </div>
 
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-400">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 rounded-md border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
               Disponível no Balcão
             </span>
           </div>
 
-          {/* Consultation Note */}
-          <div className="rounded-xl bg-zinc-900/40 border border-white/5 p-3 text-center">
-            <p className="text-[11px] text-zinc-400">
-              Cardápio digital para consulta. Valores e estoque sujeitos a confirmação no estabelecimento.
+          <div className="rounded-lg bg-zinc-900/30 border border-white/[0.03] p-2.5 text-center">
+            <p className="text-[10px] sm:text-[11px] text-zinc-500">
+              Cardápio digital informativo. Valores e estoque sujeitos a confirmação no estabelecimento.
             </p>
           </div>
         </div>
@@ -721,6 +741,7 @@ function Index() {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const filterBarRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const productsGridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -732,43 +753,65 @@ function Index() {
     setAgeVerified(true);
   };
 
-  // GSAP Animations and ScrollTriggers
+  // GSAP Smooth Scroll Animations
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      // 1. Hero Reveal Animation
+      // 1. Header scroll effect
+      if (headerRef.current) {
+        ScrollTrigger.create({
+          start: "top -30",
+          onUpdate: (self) => {
+            if (self.progress > 0) {
+              gsap.to(headerRef.current, {
+                backgroundColor: "rgba(9, 9, 11, 0.92)",
+                borderBottomColor: "rgba(255, 255, 255, 0.08)",
+                duration: 0.2,
+              });
+            } else {
+              gsap.to(headerRef.current, {
+                backgroundColor: "rgba(9, 9, 11, 0.75)",
+                borderBottomColor: "rgba(255, 255, 255, 0.04)",
+                duration: 0.2,
+              });
+            }
+          },
+        });
+      }
+
+      // 2. Hero entrance
       if (heroRef.current) {
         gsap.fromTo(
-          heroRef.current.querySelectorAll(".hero-anim"),
-          { opacity: 0, y: 30 },
+          heroRef.current.querySelectorAll(".hero-fade"),
+          { opacity: 0, y: 16 },
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            stagger: 0.12,
+            duration: 0.7,
+            stagger: 0.08,
             ease: "power2.out",
           }
         );
       }
 
-      // 2. Info Cards Scroll Reveal
+      // 3. Info Cards Scroll Reveal
       const infoCards = document.querySelectorAll(".info-card");
       if (infoCards.length > 0) {
         gsap.fromTo(
           infoCards,
-          { opacity: 0, y: 20 },
+          { opacity: 0, y: 18 },
           {
             opacity: 1,
             y: 0,
-            duration: 0.6,
-            stagger: 0.1,
+            duration: 0.5,
+            stagger: 0.08,
             ease: "power2.out",
             scrollTrigger: {
               trigger: "#info-section",
-              start: "top 85%",
+              start: "top 88%",
               toggleActions: "play none none none",
             },
           }
@@ -803,7 +846,7 @@ function Index() {
     });
   }, [activeCategory, searchQuery, quickFilter]);
 
-  // Animate product cards on filter/search change
+  // Product cards smooth transition on filter change
   useEffect(() => {
     if (!productsGridRef.current) return;
     const cards = productsGridRef.current.querySelectorAll(".product-item");
@@ -811,13 +854,12 @@ function Index() {
 
     gsap.fromTo(
       cards,
-      { opacity: 0, y: 15, scale: 0.98 },
+      { opacity: 0, y: 12 },
       {
         opacity: 1,
         y: 0,
-        scale: 1,
-        duration: 0.35,
-        stagger: 0.03,
+        duration: 0.28,
+        stagger: 0.02,
         ease: "power2.out",
       }
     );
@@ -826,85 +868,96 @@ function Index() {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen bg-[#08080a] text-zinc-100 selection:bg-amber-500 selection:text-black font-sans"
+      className="relative min-h-screen bg-[#09090b] text-zinc-100 selection:bg-amber-500/30 selection:text-white font-sans"
     >
       {!ageVerified && <AgeVerification onPass={handlePassAge} />}
 
-      {/* Modal */}
       <ProductModal
         product={selectedProduct}
         onClose={() => setSelectedProduct(null)}
       />
 
-      {/* Elegant Ambient Background with subtle gradient & noise */}
+      {/* Ambient background glow — extremely subtle, seamlessly blended */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[550px] w-full max-w-5xl bg-gradient-to-b from-amber-500/[0.07] via-orange-500/[0.03] to-transparent blur-3xl" />
-        <div className="absolute -bottom-20 right-0 h-[400px] w-[400px] rounded-full bg-amber-600/[0.04] blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[450px] w-full max-w-4xl bg-gradient-to-b from-amber-600/[0.04] to-transparent blur-3xl" />
       </div>
 
-      {/* Top Banner — Status bar */}
-      <div className="relative z-40 border-b border-white/[0.05] bg-zinc-950/60 px-4 py-2 text-xs text-zinc-400 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-            </span>
-            <span className="font-medium text-zinc-300">Aberto Agora</span>
-            <span className="hidden sm:inline text-zinc-600">•</span>
-            <span className="hidden sm:inline text-zinc-400">Atendimento e Balcão</span>
-          </div>
-
-          <div className="flex items-center gap-4 text-[11px] sm:text-xs">
-            <span className="hidden md:inline text-zinc-500">Catálogo Digital Oficial</span>
-            <a
-              href={INSTAGRAM}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1.5 text-zinc-400 transition hover:text-amber-400"
-            >
-              <Instagram className="h-3.5 w-3.5" />
-              <span>@adega_docheff</span>
-            </a>
-          </div>
+      {/* 1. Ticker / Marquee: Letreiro sutil indo de um lado para o outro */}
+      <div className="relative z-40 overflow-hidden border-b border-white/[0.03] bg-zinc-950/60 py-1.5 backdrop-blur-md">
+        <div className="animate-marquee items-center text-[11px] font-medium tracking-wide text-zinc-400">
+          {/* Loop items repeated for seamless infinite scroll */}
+          {[1, 2].map((loop) => (
+            <div key={loop} className="flex items-center shrink-0">
+              <span className="mx-4 inline-flex items-center gap-1.5 text-zinc-200">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                ADEGA ABERTA
+              </span>
+              <span className="text-zinc-700">•</span>
+              <span className="mx-4 inline-flex items-center gap-1.5">
+                <Clock className="h-3 w-3 text-amber-500/80" />
+                ATENDIMENTO NO BALCÃO
+              </span>
+              <span className="text-zinc-700">•</span>
+              <span className="mx-4 inline-flex items-center gap-1.5">
+                <ShieldCheck className="h-3 w-3 text-amber-500/80" />
+                BEBIDAS 100% ORIGINAIS
+              </span>
+              <span className="text-zinc-700">•</span>
+              <span className="mx-4 inline-flex items-center gap-1.5">
+                <Snowflake className="h-3 w-3 text-cyan-400/80" />
+                CERVEJAS A -4°C
+              </span>
+              <span className="text-zinc-700">•</span>
+              <span className="mx-4 inline-flex items-center gap-1.5">
+                <Flame className="h-3 w-3 text-amber-500/80" />
+                COMBOS COM GELO DE SABOR
+              </span>
+              <span className="text-zinc-700">•</span>
+              <span className="mx-4 inline-flex items-center gap-1.5">
+                <MapPin className="h-3 w-3 text-amber-500/80" />
+                RETIRADA NO LOCAL
+              </span>
+              <span className="text-zinc-700">•</span>
+              <span className="mx-4 inline-flex items-center gap-1.5">
+                <Instagram className="h-3 w-3 text-amber-500/80" />
+                @adega_docheff
+              </span>
+              <span className="text-zinc-700">•</span>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Sticky Header */}
-      <header className="sticky top-0 z-30 glass-nav transition-all">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:py-3.5">
+      {/* 2. Header — Logo sem container ou bordas ao redor */}
+      <header
+        ref={headerRef}
+        className="sticky top-0 z-30 glass-nav transition-all duration-200"
+      >
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:py-3">
+          {/* Brand: Logo solta sem bordas e tipografia limpa */}
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-white/10 bg-zinc-900/60 p-1.5 shadow-sm">
-              <img
-                src={logoImg}
-                alt="Logo Adega do Chefe"
-                className="h-full w-full object-contain"
-              />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-base sm:text-lg tracking-tight text-white">
-                  ADEGA DO CHEFE
-                </span>
-              </div>
-              <span className="block text-[10px] sm:text-[11px] font-medium text-zinc-400">
+            <img
+              src={logoImg}
+              alt="Adega do Chefe"
+              className="h-9 sm:h-11 w-auto object-contain select-none transition-transform hover:scale-105"
+            />
+            <div className="flex flex-col">
+              <span className="font-display text-base sm:text-lg font-bold tracking-tight text-white leading-tight">
+                ADEGA DO CHEFE
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-medium text-zinc-400">
                 Cardápio Digital de Consulta
               </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Social links */}
+          <div className="flex items-center gap-2">
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-zinc-300 transition hover:bg-white/[0.08] hover:text-white"
+              className="flex items-center gap-1.5 rounded-lg border border-white/[0.04] bg-white/[0.02] px-2.5 py-1.5 text-xs font-medium text-zinc-300 transition hover:bg-white/[0.06] hover:text-white"
             >
               <MapPin className="h-3.5 w-3.5 text-amber-400" />
               <span className="hidden sm:inline">Localização</span>
@@ -913,7 +966,7 @@ function Index() {
               href={INSTAGRAM}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-1.5 text-xs font-semibold text-amber-300 transition hover:bg-amber-500/20"
+              className="flex items-center gap-1.5 rounded-lg border border-amber-500/20 bg-amber-500/10 px-2.5 py-1.5 text-xs font-semibold text-amber-300 transition hover:bg-amber-500/20"
             >
               <Instagram className="h-3.5 w-3.5 text-amber-400" />
               <span>Instagram</span>
@@ -922,82 +975,81 @@ function Index() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative overflow-hidden pt-8 pb-10 sm:pt-14 sm:pb-16">
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
-          <div className="hero-anim inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1 text-xs font-medium text-zinc-300 backdrop-blur-md">
-            <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-            Bebidas 100% Originais & Cervejas Trincando
+      {/* 3. Hero Section */}
+      <section ref={heroRef} className="relative overflow-hidden pt-8 pb-8 sm:pt-12 sm:pb-12">
+        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
+          <div className="hero-fade inline-flex items-center gap-1.5 rounded-full border border-white/[0.04] bg-white/[0.02] px-3 py-1 text-xs font-medium text-zinc-300 backdrop-blur-sm">
+            <ShieldCheck className="h-3.5 w-3.5 text-amber-400" />
+            <span>Bebidas Originais & Atendimento no Balcão</span>
           </div>
 
-          <h1 className="hero-anim mt-4 text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
+          <h1 className="hero-fade mt-3.5 font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.12]">
             Cardápio Oficial da{" "}
             <span className="text-gradient-amber">Adega do Chefe</span>
           </h1>
 
-          <p className="hero-anim mt-3 text-sm sm:text-base text-zinc-400 max-w-xl mx-auto leading-relaxed">
-            Consulte disponibilidade de combos exclusivos, destilados lacrados, cervejas geladas e tabacaria para a sua resenha.
+          <p className="hero-fade mt-2.5 text-xs sm:text-sm text-zinc-400 max-w-lg mx-auto leading-relaxed">
+            Consulte disponibilidade de combos, destilados lacrados, cervejas trincando a -4°C e tabacaria para sua resenha.
           </p>
 
-          {/* Quick Benefit Chips */}
-          <div className="hero-anim mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs">
-            <div className="flex items-center gap-1.5 rounded-xl border border-white/5 bg-zinc-900/40 px-3 py-2 text-zinc-300 backdrop-blur-sm">
-              <Snowflake className="h-3.5 w-3.5 text-cyan-400" />
+          <div className="hero-fade mt-5 flex flex-wrap items-center justify-center gap-2 text-xs">
+            <div className="flex items-center gap-1.5 rounded-lg border border-white/[0.03] bg-zinc-900/30 px-2.5 py-1.5 text-zinc-300">
+              <Snowflake className="h-3 w-3 text-cyan-400" />
               <span>Cervejas a -4°C</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-xl border border-white/5 bg-zinc-900/40 px-3 py-2 text-zinc-300 backdrop-blur-sm">
-              <Flame className="h-3.5 w-3.5 text-amber-400" />
+            <div className="flex items-center gap-1.5 rounded-lg border border-white/[0.03] bg-zinc-900/30 px-2.5 py-1.5 text-zinc-300">
+              <Flame className="h-3 w-3 text-amber-400" />
               <span>Combos com Gelo de Sabor</span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-xl border border-white/5 bg-zinc-900/40 px-3 py-2 text-zinc-300 backdrop-blur-sm">
-              <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+            <div className="flex items-center gap-1.5 rounded-lg border border-white/[0.03] bg-zinc-900/30 px-2.5 py-1.5 text-zinc-300">
+              <ShieldCheck className="h-3 w-3 text-emerald-400" />
               <span>Garrafas Originais Lacradas</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content & Catalog */}
+      {/* 4. Main Catalog Content */}
       <main className="relative z-10 mx-auto max-w-6xl px-4 pb-20">
-        {/* Sticky Filters & Search HUD */}
+        {/* Filter bar: borda suave, harmonizada com o tema escuro */}
         <div
           ref={filterBarRef}
-          className="glass-panel highlight-edge rounded-2xl p-3 sm:p-4 mb-6 shadow-xl"
+          className="glass-panel highlight-edge rounded-xl p-3 sm:p-4 mb-5"
         >
-          {/* Search Box */}
+          {/* Search Input */}
           <div className="relative">
-            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+            <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-zinc-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Buscar por cerveja, whisky, gin, energético, gelo..."
-              className="w-full rounded-xl border border-white/5 bg-zinc-900/70 py-2.5 pl-10 pr-9 text-sm text-white placeholder-zinc-500 transition focus:border-amber-500/40 focus:bg-zinc-900/90 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+              className="w-full rounded-lg border border-white/[0.04] bg-zinc-900/50 py-2 pl-9 pr-8 text-xs sm:text-sm text-white placeholder-zinc-500 transition focus:border-amber-500/30 focus:bg-zinc-900/80 focus:outline-none"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
                 aria-label="Limpar busca"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
               >
-                <X className="h-4 w-4" />
+                <X className="h-3.5 w-3.5" />
               </button>
             )}
           </div>
 
-          {/* Quick Filters */}
-          <div className="mt-3 flex flex-wrap items-center gap-1.5 pt-2.5 border-t border-white/[0.05]">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1 mr-1">
-              <SlidersHorizontal className="h-3 w-3 text-amber-400" />
-              Filtros:
+          {/* Quick filter pills */}
+          <div className="mt-2.5 flex flex-wrap items-center gap-1.5 pt-2 border-t border-white/[0.03]">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1 mr-1">
+              <SlidersHorizontal className="h-2.5 w-2.5 text-amber-400" />
+              Destaques:
             </span>
 
             <button
               onClick={() => setQuickFilter("all")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-medium transition ${
+              className={`rounded-md px-2 py-0.5 text-xs font-medium transition ${
                 quickFilter === "all"
-                  ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                  : "bg-white/[0.03] text-zinc-400 hover:text-white border border-white/5"
+                  ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
+                  : "bg-white/[0.02] text-zinc-400 hover:text-white border border-white/[0.03]"
               }`}
             >
               Todos ({PRODUCTS.length})
@@ -1005,10 +1057,10 @@ function Index() {
 
             <button
               onClick={() => setQuickFilter("promo")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-medium transition flex items-center gap-1 ${
+              className={`rounded-md px-2 py-0.5 text-xs font-medium transition flex items-center gap-1 ${
                 quickFilter === "promo"
-                  ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                  : "bg-white/[0.03] text-zinc-400 hover:text-white border border-white/5"
+                  ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
+                  : "bg-white/[0.02] text-zinc-400 hover:text-white border border-white/[0.03]"
               }`}
             >
               <Flame className="h-3 w-3 text-amber-400" /> Mais Pedidos
@@ -1016,10 +1068,10 @@ function Index() {
 
             <button
               onClick={() => setQuickFilter("combos")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-medium transition flex items-center gap-1 ${
+              className={`rounded-md px-2 py-0.5 text-xs font-medium transition flex items-center gap-1 ${
                 quickFilter === "combos"
-                  ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                  : "bg-white/[0.03] text-zinc-400 hover:text-white border border-white/5"
+                  ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
+                  : "bg-white/[0.02] text-zinc-400 hover:text-white border border-white/[0.03]"
               }`}
             >
               <Zap className="h-3 w-3 text-amber-400" /> Combos & Kits
@@ -1027,18 +1079,18 @@ function Index() {
 
             <button
               onClick={() => setQuickFilter("beer")}
-              className={`rounded-lg px-2.5 py-1 text-xs font-medium transition flex items-center gap-1 ${
+              className={`rounded-md px-2 py-0.5 text-xs font-medium transition flex items-center gap-1 ${
                 quickFilter === "beer"
-                  ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                  : "bg-white/[0.03] text-zinc-400 hover:text-white border border-white/5"
+                  ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
+                  : "bg-white/[0.02] text-zinc-400 hover:text-white border border-white/[0.03]"
               }`}
             >
               <Snowflake className="h-3 w-3 text-cyan-400" /> Cervejas
             </button>
           </div>
 
-          {/* Categories Horizontal Carousel */}
-          <div className="mt-3 -mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 scrollbar-none">
+          {/* Categories Carousel */}
+          <div className="mt-2.5 -mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 scrollbar-none">
             {CATEGORIES.map((cat) => {
               const active = cat === activeCategory;
               return (
@@ -1048,10 +1100,10 @@ function Index() {
                     setActiveCategory(cat);
                     setQuickFilter("all");
                   }}
-                  className={`shrink-0 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all ${
+                  className={`shrink-0 rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
                     active
-                      ? "gradient-btn shadow-md text-zinc-950 font-bold"
-                      : "border border-white/5 bg-zinc-900/60 text-zinc-400 hover:border-white/10 hover:text-white"
+                      ? "gradient-btn shadow-sm"
+                      : "border border-white/[0.03] bg-zinc-900/40 text-zinc-400 hover:border-white/[0.08] hover:text-white"
                   }`}
                 >
                   {cat}
@@ -1062,23 +1114,23 @@ function Index() {
         </div>
 
         {/* Counter Info Banner */}
-        <div className="mb-4 flex items-center justify-between text-xs text-zinc-400 px-1">
+        <div className="mb-3.5 flex items-center justify-between text-xs text-zinc-400 px-1">
           <span>
             Exibindo <strong className="text-zinc-200">{filteredProducts.length}</strong> itens disponíveis para consulta
           </span>
-          <span className="hidden sm:inline text-zinc-500">
-            Clique no card para especificações completas
+          <span className="hidden sm:inline text-zinc-500 text-[11px]">
+            Clique no card para ver detalhes
           </span>
         </div>
 
-        {/* Product Cards Grid */}
+        {/* Products Grid */}
         {filteredProducts.length === 0 ? (
-          <div className="glass-panel rounded-2xl p-12 text-center my-8">
-            <p className="text-base font-semibold text-zinc-300">
+          <div className="glass-panel rounded-xl p-10 text-center my-6">
+            <p className="text-sm font-semibold text-zinc-300">
               Nenhum produto encontrado para &ldquo;{searchQuery}&rdquo;
             </p>
-            <p className="mt-1.5 text-xs text-zinc-500">
-              Experimente buscar por outro nome ou selecione outra categoria acima.
+            <p className="mt-1 text-xs text-zinc-500">
+              Tente buscar com outro termo ou selecione uma categoria diferente.
             </p>
             <button
               onClick={() => {
@@ -1086,7 +1138,7 @@ function Index() {
                 setActiveCategory("Todos");
                 setQuickFilter("all");
               }}
-              className="mt-4 rounded-xl gradient-btn px-4 py-2 text-xs font-bold text-zinc-950"
+              className="mt-3.5 rounded-lg gradient-btn px-3.5 py-1.5 text-xs font-semibold"
             >
               Limpar Filtros
             </button>
@@ -1094,15 +1146,15 @@ function Index() {
         ) : (
           <div
             ref={productsGridRef}
-            className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4"
+            className="grid grid-cols-2 gap-2.5 sm:gap-3.5 sm:grid-cols-3 lg:grid-cols-4"
           >
             {filteredProducts.map((p) => (
               <article
                 key={p.id}
                 onClick={() => setSelectedProduct(p)}
-                className="product-item glass-card highlight-edge group relative flex flex-col justify-between overflow-hidden rounded-2xl cursor-pointer"
+                className="product-item glass-card highlight-edge group relative flex flex-col justify-between overflow-hidden rounded-xl cursor-pointer"
               >
-                {/* Image Container */}
+                {/* Image */}
                 <div className="relative aspect-square w-full overflow-hidden bg-zinc-900/80">
                   <img
                     src={p.image}
@@ -1110,47 +1162,48 @@ function Index() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
 
-                  {/* Badge */}
+                  {/* Badge with SVG icon */}
                   {p.badge && (
-                    <span className="absolute top-2.5 left-2.5 rounded-full border border-white/10 bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-amber-300 backdrop-blur-md">
-                      {p.badge}
+                    <span className="absolute top-2 left-2 flex items-center gap-1 rounded-md border border-white/[0.06] bg-black/75 px-1.5 py-0.5 text-[9px] font-medium text-amber-300 backdrop-blur-md">
+                      {renderBadgeIcon(p.badge)}
+                      <span>{p.badge}</span>
                     </span>
                   )}
 
-                  {/* Volume */}
-                  <span className="absolute bottom-2 right-2 rounded-md bg-black/75 px-1.5 py-0.5 text-[10px] font-medium text-zinc-300 backdrop-blur-md">
+                  {/* Volume pill */}
+                  <span className="absolute bottom-1.5 right-1.5 rounded bg-black/75 px-1.5 py-0.5 text-[9px] font-medium text-zinc-300 backdrop-blur-md">
                     {p.volume}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-1 flex-col justify-between p-3 sm:p-4">
+                <div className="flex flex-1 flex-col justify-between p-2.5 sm:p-3">
                   <div>
-                    <span className="text-[10px] font-semibold tracking-wider text-amber-400 uppercase block mb-1">
+                    <span className="text-[9px] font-semibold tracking-wider text-amber-400 uppercase block mb-0.5">
                       {p.cat}
                     </span>
                     <h3 className="font-semibold text-xs sm:text-sm text-zinc-100 group-hover:text-amber-300 transition-colors line-clamp-2 leading-snug">
                       {p.name}
                     </h3>
-                    <p className="mt-1 text-[11px] sm:text-xs text-zinc-400 line-clamp-2 leading-relaxed">
+                    <p className="mt-1 text-[11px] text-zinc-400 line-clamp-2 leading-relaxed">
                       {p.desc}
                     </p>
                   </div>
 
-                  {/* Bottom row: Price and CTA */}
-                  <div className="mt-3 pt-2.5 border-t border-white/[0.06] flex items-center justify-between">
+                  {/* Price & Action */}
+                  <div className="mt-2.5 pt-2 border-t border-white/[0.04] flex items-center justify-between">
                     <div>
-                      <span className="text-[9px] uppercase tracking-wider text-zinc-400 block font-medium">
+                      <span className="text-[8px] uppercase tracking-wider text-zinc-500 block font-medium">
                         Preço Balcão
                       </span>
-                      <span className="text-base sm:text-lg font-bold tracking-tight text-gradient-amber">
+                      <span className="text-sm sm:text-base font-bold tracking-tight text-gradient-amber">
                         {p.price}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-1 rounded-lg border border-white/10 bg-white/[0.04] px-2 py-1 text-[11px] font-medium text-zinc-300 transition group-hover:bg-amber-500 group-hover:text-zinc-950 group-hover:border-amber-500">
+                    <div className="flex items-center gap-1 rounded-md border border-white/[0.06] bg-white/[0.03] px-2 py-1 text-[10px] font-medium text-zinc-300 transition group-hover:border-amber-500/30 group-hover:bg-amber-500/10 group-hover:text-amber-300">
                       <Eye className="h-3 w-3" />
                       <span className="hidden sm:inline">Ver</span>
                     </div>
@@ -1161,38 +1214,38 @@ function Index() {
           </div>
         )}
 
-        {/* Establishment Info Section */}
-        <section id="info-section" className="mt-16 grid gap-4 sm:grid-cols-3">
+        {/* 5. Establishment Info Section */}
+        <section id="info-section" className="mt-14 grid gap-3 sm:grid-cols-3">
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`}
             target="_blank"
             rel="noreferrer"
-            className="info-card glass-card highlight-edge group flex flex-col justify-between rounded-2xl p-5"
+            className="info-card glass-card highlight-edge group flex flex-col justify-between rounded-xl p-4 sm:p-5"
           >
-            <div className="flex items-start gap-3.5">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400">
-                <MapPin className="h-5 w-5" />
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-amber-500/20 bg-amber-500/10 text-amber-400">
+                <MapPin className="h-4 w-4" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-sm">Localização</h4>
+                <h4 className="font-semibold text-white text-xs sm:text-sm">Localização</h4>
                 <p className="mt-1 text-xs text-zinc-400 leading-relaxed">
                   {ADDRESS}
                 </p>
               </div>
             </div>
-            <div className="mt-4 flex items-center text-xs font-semibold text-amber-400 group-hover:underline">
+            <div className="mt-3 flex items-center text-xs font-medium text-amber-400 group-hover:underline">
               <span>Como chegar no Google Maps</span>
               <ChevronRight className="h-3.5 w-3.5 ml-0.5" />
             </div>
           </a>
 
-          <div className="info-card glass-card highlight-edge flex flex-col justify-between rounded-2xl p-5">
-            <div className="flex items-start gap-3.5">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400">
-                <Clock className="h-5 w-5" />
+          <div className="info-card glass-card highlight-edge flex flex-col justify-between rounded-xl p-4 sm:p-5">
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-amber-500/20 bg-amber-500/10 text-amber-400">
+                <Clock className="h-4 w-4" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-sm">Horário de Funcionamento</h4>
+                <h4 className="font-semibold text-white text-xs sm:text-sm">Horário de Funcionamento</h4>
                 <p className="mt-1 text-xs text-zinc-400 leading-relaxed">
                   Segunda a Quinta: 14h às 02h <br />
                   Sexta e Sábado: 14h às 05h <br />
@@ -1200,9 +1253,9 @@ function Index() {
                 </p>
               </div>
             </div>
-            <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Atendimento presencial</span>
+            <div className="mt-3 flex items-center gap-1.5 text-xs font-medium text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span>Atendimento presencial no balcão</span>
             </div>
           </div>
 
@@ -1210,39 +1263,39 @@ function Index() {
             href={INSTAGRAM}
             target="_blank"
             rel="noreferrer"
-            className="info-card glass-card highlight-edge group flex flex-col justify-between rounded-2xl p-5"
+            className="info-card glass-card highlight-edge group flex flex-col justify-between rounded-xl p-4 sm:p-5"
           >
-            <div className="flex items-start gap-3.5">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400">
-                <Instagram className="h-5 w-5" />
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-amber-500/20 bg-amber-500/10 text-amber-400">
+                <Instagram className="h-4 w-4" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-sm">Instagram Oficial</h4>
+                <h4 className="font-semibold text-white text-xs sm:text-sm">Instagram Oficial</h4>
                 <p className="mt-1 text-xs text-zinc-400 leading-relaxed">
-                  Siga @adega_docheff para acompanhar os stories com ofertas diárias e novidades.
+                  Acompanhe @adega_docheff para promoções relâmpago e novidades da semana.
                 </p>
               </div>
             </div>
-            <div className="mt-4 flex items-center text-xs font-semibold text-amber-400 group-hover:underline">
-              <span>Acessar perfil @adega_docheff</span>
-              <ExternalLink className="h-3.5 w-3.5 ml-1" />
+            <div className="mt-3 flex items-center text-xs font-medium text-amber-400 group-hover:underline">
+              <span>Ver perfil @adega_docheff</span>
+              <ExternalLink className="h-3 w-3 ml-1" />
             </div>
           </a>
         </section>
 
-        {/* Footer */}
-        <footer className="mt-16 border-t border-white/[0.06] pt-8 pb-12 text-center text-xs text-zinc-500 space-y-3">
+        {/* 6. Footer — Logo limpa */}
+        <footer className="mt-14 border-t border-white/[0.04] pt-7 pb-10 text-center text-xs text-zinc-500 space-y-2.5">
           <div className="flex items-center justify-center gap-2">
-            <img src={logoImg} alt="Adega do Chefe" className="h-7 w-auto opacity-75" />
-            <span className="font-bold text-sm tracking-tight text-zinc-300">
+            <img src={logoImg} alt="Adega do Chefe" className="h-7 w-auto opacity-80" />
+            <span className="font-display text-sm font-bold tracking-tight text-zinc-300">
               ADEGA DO CHEFE
             </span>
           </div>
           <p className="max-w-md mx-auto text-[11px] text-zinc-500 leading-relaxed">
             Cardápio online informativo para consulta de itens e preços no balcão. Imagens meramente ilustrativas. Preços e disponibilidade sujeitos a alteração sem aviso prévio.
           </p>
-          <p className="text-[11px] text-zinc-600">
-            A venda e o consumo de bebidas alcoólicas são proibidos para menores de 18 anos (Lei nº 8.069/1990). Beba com responsabilidade. Se beber, não dirija.
+          <p className="text-[10px] text-zinc-600">
+            A venda e o consumo de bebidas alcoólicas são proibidos para menores de 18 anos (Lei Federal nº 8.069/1990). Beba com moderação. Se beber, não dirija.
           </p>
         </footer>
       </main>
